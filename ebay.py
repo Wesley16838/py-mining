@@ -17,6 +17,7 @@ chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 driver.get(url)
 
+
 #time.sleep(5)
 #driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
