@@ -11,11 +11,10 @@ url='https://www.ebay.com/sch/i.html?_nkw='+sys.argv[1]+'+'+sys.argv[2]
 #open the browser and visit the url
 chrome_options = webdriver.ChromeOptions()
 chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-chrome_options.add_arguement("--headless")
-chrome_options.add_arguement("--disable-dev-shm-usage")
-chrome-options.add_arguement("--no-sandbox")
-
-driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER PATH", chrome_options = chrome_options))
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--disable-dev-shm-usage")
+chrome_options.add_argument("--no-sandbox")
+driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 driver.get(url)
 
 #time.sleep(5)
