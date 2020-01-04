@@ -5,8 +5,8 @@ import os
 
 print('in py!')
 # print(sys.argv[1])
-# url='https://www.amazon.com/s?k='+sys.argv[1]+'+'+sys.argv[2]
-url='https://www.amazon.com/s?k='+'apple'+'+'+'phone'
+url='https://www.amazon.com/s?k='+sys.argv[1]+'+'+sys.argv[2]
+#url='https://www.amazon.com/s?k='+'apple'+'+'+'phone'
 
 #open the browser and visit the url
 chrome_options = webdriver.ChromeOptions()
