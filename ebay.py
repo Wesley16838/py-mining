@@ -3,7 +3,7 @@ import codecs
 import sys 
 import time
 import re
-
+import os
 print('in ebay.py!')
 print(sys.argv[1]+'+'+sys.argv[2])
 url='https://www.ebay.com/sch/i.html?_nkw='+sys.argv[1]+'+'+sys.argv[2]

@@ -8,6 +8,7 @@ Created on Tue Oct 15 00:15:22 2019
 from selenium import webdriver
 import codecs
 import sys
+import os
 numset = {'0','1','2','3','4','5','6','7','8','9'}
 
 url='https://www.bestbuy.com/site/searchpage.jsp?st='
