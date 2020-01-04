@@ -5,7 +5,7 @@ import sys
 
 print('in py!')
 print(sys.argv[1])
-url='https://www.amazon.com/s?k='+sys.argv[1]+'+'+sys.argv[2]
+# url='https://www.amazon.com/s?k='+sys.argv[1]+'+'+sys.argv[2]
 #url='https://www.amazon.com/s?k='+'apple'+'+'+'phone'
 
 #open the browser and visit the url
@@ -15,7 +15,7 @@ chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
-driver.get(url)
+driver.get('https://www.amazon.com/s?k=apple+laptop')
 
 #find all elements with a class that ends in 'tweet-text'
 tweets=driver.find_elements_by_css_selector("[class*=s-result-item]")#*:contains
@@ -87,7 +87,7 @@ for tweet in tweets:
         
         try: link = tweet.find_element_by_css_selector("[class=a-link-normal]").get_attribute('href')
         except: link='NA'
-        
+        print(title.replace('\n',' ')+'\t'+str(integer)+'.'+str(decimal)+'\t'+sale+'\t'+link+'\t'+pic+'\n')
         fw.write(title.replace('\n',' ')+'\t'+str(integer)+'.'+str(decimal)+'\t'+sale+'\t'+link+'\t'+pic+'\n')
         #print(title.replace('\n',' ')+'\t'+str(integer)+'.'+str(decimal)+'\t'+pic+'\n')
         #print('link',link)
