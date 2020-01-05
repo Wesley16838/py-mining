@@ -124,8 +124,10 @@ for p in range(1,pageNum+1): # for each page
         
         #print(name + '\t' + sale+ '\t' + price + '\t' + str(url) + '\t' + image + '\n')
         if sale == 'NA':
+            print(name + '\t' + str(price) + '\t' + str(sale) + '\t' + url + '\t' + image + '\n')
             fw.write(name + '\t' + str(price) + '\t' + str(sale) + '\t' + url + '\t' + image + '\n') # write to file 
         else:
+            print(name + '\t' + str(sale) + '\t' + str(price) + '\t' + url + '\t' + image + '\n')
             fw.write(name + '\t' + str(sale) + '\t' + str(price) + '\t' + url + '\t' + image + '\n') 
 		
     
