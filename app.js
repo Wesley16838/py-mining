@@ -28,7 +28,9 @@ app.get('/amazon', async (req , res) => {
 app.get('/bestbuy', async (req , res) => {
     console.log('in bestbuy mining!!!')
     kw=req.query.keyword.split(' ')
-    var process = await spawn('python', ["./bestbuy.py", kw[0] , kw[1]]);
+    var process = await spawn('python', ["./bestbuy.py", kw[0] , kw[1]],{
+        timeout: 20000
+      });
     process.stdout.on('data', function (data) {
         console.log(data.toString())
     });
