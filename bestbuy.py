@@ -22,6 +22,8 @@ chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 # driver = webdriver.Chrome('./chromedriver')
 print('bf get')
+print('key,',key)
+print('url+key,',url+key)
 driver.get(url+key)
 print('af get')
 pageNum=1 # number of pages to collect
